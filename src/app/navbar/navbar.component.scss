@@ -1,0 +1,54 @@
+#navbar{
+    width:100vw;
+    height:64px;
+    background-color:teal;
+    box-shadow:0 5px 5px rgba(0,0,0,.35);
+
+    font-family: 'Roboto', sans-serif;
+
+    nav{
+        position:relative;
+        ul{
+            position:absolute;
+            right:16px;
+            top:12px;
+
+            li{
+                display:inline-block;
+                list-style:none;
+                margin-right:16px;
+
+                a{
+                    text-decoration:none;
+                    color:white;
+                    margin-left:3.5em;
+                    margin-top:5px;
+                    position:relative;
+                }
+
+                a:hover{
+                    color:white;
+                }
+
+                a::after{
+                    content:'';
+                    position:absolute;
+                    bottom:-1em;
+                    left:0;
+                    width:5px;
+                    height:5px;
+                    background-color:white;
+                    opacity:0;
+                    z-index:3;
+                    transition:opacity ease-in-out 250ms,
+                               width ease-in-out 250ms;
+                }
+
+                a:hover::after{
+                    opacity:1;
+                    width:100%;
+                }
+            }
+        }
+    }
+}
