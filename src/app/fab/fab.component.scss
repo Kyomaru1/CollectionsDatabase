@@ -1,0 +1,32 @@
+div#fab{
+    width:4em;
+    height:4em;
+    background-color:orange;
+    border-radius:50;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    i{
+        color:white;
+        font-size:3em;
+        margin-top:.2em;
+        position:absolute;
+        z-index:3;
+    }
+}
+
+div#fab::after{
+    content:'';
+    width:4em;
+    height:4em;
+    border-radius:50;
+    opacity:0;
+    transition:opacity ease-in-out 125ms;
+    background-color:black;
+}
+
+
+div#fab:hover::after{
+    opacity:.2;
+    box-shadow:0 3px 0 rgba(0,0,0,.3);
+}
