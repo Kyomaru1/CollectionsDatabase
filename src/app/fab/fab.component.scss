@@ -1,15 +1,16 @@
 div#fab{
-    width:4em;
-    height:4em;
+    width:4rem;
+    height:4rem;
     background-color:orange;
-    border-radius:50;
+    border-radius:50px;
+    
     position:relative;
     display:flex;
     justify-content: center;
     i{
         color:white;
-        font-size:3em;
-        margin-top:.2em;
+        font-size:3rem;
+        margin-top:.5rem;
         position:absolute;
         z-index:3;
     }
@@ -17,11 +18,13 @@ div#fab{
 
 div#fab::after{
     content:'';
-    width:4em;
-    height:4em;
-    border-radius:50;
+    width:4rem;
+    height:4rem;
+    border-radius:50px;
     opacity:0;
     transition:opacity ease-in-out 125ms;
+    -webkit-transition: opacity ease-in-out 125ms;
+    -moz-transition:opacity ease-in-out 125ms;
     background-color:black;
 }
 
